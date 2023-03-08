@@ -44,7 +44,7 @@ struct ContentView: View {
                         Slider(value: $dotControl, in: 0...3, step: 1, onEditingChanged: {
                             editing in
                             dotControlText = calc.setDotControl(Int32(dotControl))
-                                            })
+                        })
                         Text("\(dotControlText)")
                             .font(.system(size: 24, weight: .bold))
                             .frame(width: 40, height: 40)
