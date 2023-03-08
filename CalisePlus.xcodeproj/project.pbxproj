@@ -14,6 +14,8 @@
 		A7E9DC0829B82DD5004367B4 /* CalisePlusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E9DC0729B82DD5004367B4 /* CalisePlusTests.swift */; };
 		A7E9DC1229B82DD5004367B4 /* CalisePlusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E9DC1129B82DD5004367B4 /* CalisePlusUITests.swift */; };
 		A7E9DC1429B82DD5004367B4 /* CalisePlusUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E9DC1329B82DD5004367B4 /* CalisePlusUITestsLaunchTests.swift */; };
+		A7E9DC2329B82F77004367B4 /* calc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7E9DC2129B82F77004367B4 /* calc.cpp */; };
+		A7E9DC2529B8307A004367B4 /* calcObjC.mm in Sources */ = {isa = PBXBuildFile; fileRef = A7E9DC2429B8307A004367B4 /* calcObjC.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,11 @@
 		A7E9DC0D29B82DD5004367B4 /* CalisePlusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalisePlusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7E9DC1129B82DD5004367B4 /* CalisePlusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalisePlusUITests.swift; sourceTree = "<group>"; };
 		A7E9DC1329B82DD5004367B4 /* CalisePlusUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalisePlusUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A7E9DC2029B82F77004367B4 /* CalisePlus-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CalisePlus-Bridging-Header.h"; sourceTree = "<group>"; };
+		A7E9DC2129B82F77004367B4 /* calc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = calc.cpp; path = "../../Downloads/Class_Calc-main/calc.cpp"; sourceTree = "<group>"; };
+		A7E9DC2229B82F77004367B4 /* calc.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = calc.hpp; path = "../../Downloads/Class_Calc-main/calc.hpp"; sourceTree = "<group>"; };
+		A7E9DC2429B8307A004367B4 /* calcObjC.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = calcObjC.mm; sourceTree = "<group>"; };
+		A7E9DC2629B830CE004367B4 /* calcObjC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = calcObjC.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,10 +81,15 @@
 		A7E9DBEA29B82DD5004367B4 = {
 			isa = PBXGroup;
 			children = (
+				A7E9DC2629B830CE004367B4 /* calcObjC.h */,
+				A7E9DC2429B8307A004367B4 /* calcObjC.mm */,
+				A7E9DC2129B82F77004367B4 /* calc.cpp */,
+				A7E9DC2229B82F77004367B4 /* calc.hpp */,
 				A7E9DBF529B82DD5004367B4 /* CalisePlus */,
 				A7E9DC0629B82DD5004367B4 /* CalisePlusTests */,
 				A7E9DC1029B82DD5004367B4 /* CalisePlusUITests */,
 				A7E9DBF429B82DD5004367B4 /* Products */,
+				A7E9DC2029B82F77004367B4 /* CalisePlus-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -195,6 +207,7 @@
 				TargetAttributes = {
 					A7E9DBF229B82DD5004367B4 = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 					A7E9DC0229B82DD5004367B4 = {
 						CreatedOnToolsVersion = 14.2;
@@ -259,6 +272,8 @@
 			files = (
 				A7E9DBF929B82DD5004367B4 /* ContentView.swift in Sources */,
 				A7E9DBF729B82DD5004367B4 /* CalisePlusApp.swift in Sources */,
+				A7E9DC2529B8307A004367B4 /* calcObjC.mm in Sources */,
+				A7E9DC2329B82F77004367B4 /* calc.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +429,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CalisePlus/Preview Content\"";
@@ -432,6 +448,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Itoria.CalisePlus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "CalisePlus-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -442,6 +460,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CalisePlus/Preview Content\"";
@@ -460,6 +479,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Itoria.CalisePlus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "CalisePlus-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
