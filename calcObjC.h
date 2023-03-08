@@ -6,7 +6,7 @@
 @interface calcObjC : NSObject
 
 - (void) setOouControl : (int) myValue;
-- (void) setDotControl : (int) myValue;
+- (NSString *) setDotControl : (int) myValue;
 - (NSString *) myClear;
 - (NSString *) myNegative;
 - (NSString *) memoryRead;
