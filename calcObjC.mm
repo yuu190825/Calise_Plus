@@ -34,6 +34,11 @@
     return [NSString stringWithUTF8String:myReturn.c_str()];
 }
 
+- (NSString *) backSpace {
+    string myReturn = calc -> backSpace();
+    return [NSString stringWithUTF8String:myReturn.c_str()];
+}
+
 - (NSString *) memoryRead {
     string myReturn = calc -> memoryRead();
     return [NSString stringWithUTF8String:myReturn.c_str()];

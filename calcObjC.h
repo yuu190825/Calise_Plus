@@ -9,6 +9,7 @@
 - (NSString *) setDotControl : (int) myValue;
 - (NSString *) myClear;
 - (NSString *) myNegative;
+- (NSString *) backSpace;
 - (NSString *) memoryRead;
 - (void) memoryWrite;
 - (NSString *) powTwo;

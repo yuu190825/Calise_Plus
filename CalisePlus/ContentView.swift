@@ -65,7 +65,7 @@ struct ContentView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .foregroundColor(.white)
                     .background(.black)
-                    Button(action: {}) {
+                    Button(action: {screenText = calc.backSpace()}) {
                         Text("<-").font(.system(size: 36, weight: .bold))
                     }
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
