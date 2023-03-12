@@ -12,11 +12,13 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             Color(red: 176/255, green: 196/255, blue: 222/255).ignoresSafeArea()
-            VStack(spacing: 6) {
-                Text("\(screenText)").font(.system(size: 36, weight: .bold))
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .trailing)
-                    .background(Color(red: 240/255, green: 248/255, blue: 255/255))
-                HStack(spacing: 6) {
+            Grid(horizontalSpacing: 6, verticalSpacing: 6) {
+                GridRow {
+                    Text("\(screenText)").font(.system(size: 36, weight: .bold))
+                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .trailing).gridCellColumns(4)
+                        .background(Color(red: 240/255, green: 248/255, blue: 255/255))
+                }
+                GridRow {
                     VStack {
                         Slider(value: $oouControl, in: 0...2, step: 1, onEditingChanged: {
                             editing in
@@ -33,7 +35,7 @@ struct ContentView: View {
                         Text("\(oouControlText)").font(.system(size: 24, weight: .bold))
                             .frame(maxWidth: 50, maxHeight: .infinity)
                             .background(Color(red: 240/255, green: 248/255, blue: 255/255))
-                    }.frame(maxWidth: .infinity, maxHeight: .infinity)
+                    }.gridCellColumns(2)
                     VStack {
                         Slider(value: $dotControl, in: 0...3, step: 1, onEditingChanged: {
                             editing in
@@ -42,14 +44,15 @@ struct ContentView: View {
                         Text("\(dotControlText)").font(.system(size: 24, weight: .bold))
                             .frame(maxWidth: 50, maxHeight: .infinity)
                             .background(Color(red: 240/255, green: 248/255, blue: 255/255))
-                    }.frame(maxWidth: .infinity, maxHeight: .infinity)
-                }.frame(maxWidth: .infinity, maxHeight: .infinity)
-                HStack(spacing: 6) {
+                    }.gridCellColumns(2)
+                }
+                GridRow {
                     Button(action: {screenText = calc.myClear()}) {
                         Text("C").font(.system(size: 36, weight: .bold))
                     }
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color(red: 70/255, green: 130/255, blue: 180/255)).foregroundColor(.white)
+                    Color.clear.gridCellUnsizedAxes([.horizontal, .vertical])
                     Button(action: {screenText = calc.myNegative()}) {
                         Text("(-)").font(.system(size: 36, weight: .bold))
                     }
@@ -60,8 +63,8 @@ struct ContentView: View {
                     }
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color(red: 70/255, green: 130/255, blue: 180/255)).foregroundColor(.white)
-                }.frame(maxWidth: .infinity, maxHeight: .infinity)
-                HStack(spacing: 6) {
+                }
+                GridRow {
                     Button(action: {screenText = calc.memoryRead()}) {
                         Text("MR").font(.system(size: 36, weight: .bold))
                     }
@@ -82,8 +85,8 @@ struct ContentView: View {
                     }
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color(red: 70/255, green: 130/255, blue: 180/255)).foregroundColor(.white)
-                }.frame(maxWidth: .infinity, maxHeight: .infinity)
-                HStack(spacing: 6) {
+                }
+                GridRow {
                     Button(action: {screenText = calc.sendNumber("7")}) {
                         Text("7").font(.system(size: 36, weight: .bold))
                     }
@@ -104,8 +107,8 @@ struct ContentView: View {
                     }
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color(red: 70/255, green: 130/255, blue: 180/255)).foregroundColor(.white)
-                }.frame(maxWidth: .infinity, maxHeight: .infinity)
-                HStack(spacing: 6) {
+                }
+                GridRow {
                     Button(action: {screenText = calc.sendNumber("4")}) {
                         Text("4").font(.system(size: 36, weight: .bold))
                     }
@@ -126,8 +129,8 @@ struct ContentView: View {
                     }
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color(red: 70/255, green: 130/255, blue: 180/255)).foregroundColor(.white)
-                }.frame(maxWidth: .infinity, maxHeight: .infinity)
-                HStack(spacing: 6) {
+                }
+                GridRow {
                     Button(action: {screenText = calc.sendNumber("1")}) {
                         Text("1").font(.system(size: 36, weight: .bold))
                     }
@@ -148,8 +151,8 @@ struct ContentView: View {
                     }
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color(red: 70/255, green: 130/255, blue: 180/255)).foregroundColor(.white)
-                }.frame(maxWidth: .infinity, maxHeight: .infinity)
-                HStack(spacing: 6) {
+                }
+                GridRow {
                     Button(action: {screenText = calc.sendNumber("0")}) {
                         Text("0").font(.system(size: 36, weight: .bold))
                     }
@@ -170,8 +173,8 @@ struct ContentView: View {
                     }
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color(red: 70/255, green: 130/255, blue: 180/255)).foregroundColor(.white)
-                }.frame(maxWidth: .infinity, maxHeight: .infinity)
-            }.frame(maxWidth: .infinity, maxHeight: .infinity).padding(6)
+                }
+            }.padding(6)
         }
     }
 }
