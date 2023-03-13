@@ -49,129 +49,106 @@ struct ContentView: View {
                 GridRow {
                     Button(action: {screenText = calc.myClear()}) {
                         Text("C").font(.system(size: 36, weight: .bold))
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    }.frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color(red: 70/255, green: 130/255, blue: 180/255)).foregroundColor(.white)
                     Color.clear.gridCellUnsizedAxes([.horizontal, .vertical])
                     Button(action: {screenText = calc.myNegative()}) {
                         Text("(-)").font(.system(size: 36, weight: .bold))
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    }.frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color(red: 70/255, green: 130/255, blue: 180/255)).foregroundColor(.white)
                     Button(action: {screenText = calc.backSpace()}) {
                         Text("<-").font(.system(size: 36, weight: .bold))
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    }.frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color(red: 70/255, green: 130/255, blue: 180/255)).foregroundColor(.white)
                 }
                 GridRow {
                     Button(action: {screenText = calc.memoryRead()}) {
                         Text("MR").font(.system(size: 36, weight: .bold))
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    }.frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color(red: 70/255, green: 130/255, blue: 180/255)).foregroundColor(.white)
                     Button(action: {calc.memoryWrite()}) {
                         Text("MW").font(.system(size: 36, weight: .bold))
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    }.frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color(red: 70/255, green: 130/255, blue: 180/255)).foregroundColor(.white)
                     Button(action: {screenText = calc.powTwo()}) {
                         Text("^2").font(.system(size: 36, weight: .bold))
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    }.frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color(red: 70/255, green: 130/255, blue: 180/255)).foregroundColor(.white)
                     Button(action: {screenText = calc.mySqrt()}) {
                         Text("SR").font(.system(size: 36, weight: .bold))
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    }.frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color(red: 70/255, green: 130/255, blue: 180/255)).foregroundColor(.white)
                 }
                 GridRow {
                     Button(action: {screenText = calc.sendNumber("7")}) {
                         Text("7").font(.system(size: 36, weight: .bold))
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    }.frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color(red: 70/255, green: 130/255, blue: 180/255)).foregroundColor(.white)
                     Button(action: {screenText = calc.sendNumber("8")}) {
                         Text("8").font(.system(size: 36, weight: .bold))
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    }.frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color(red: 70/255, green: 130/255, blue: 180/255)).foregroundColor(.white)
                     Button(action: {screenText = calc.sendNumber("9")}) {
                         Text("9").font(.system(size: 36, weight: .bold))
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    }.frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color(red: 70/255, green: 130/255, blue: 180/255)).foregroundColor(.white)
                     Button(action: {screenText = calc.sendOperator(4)}) {
                         Text("/").font(.system(size: 36, weight: .bold))
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    }.frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color(red: 70/255, green: 130/255, blue: 180/255)).foregroundColor(.white)
                 }
                 GridRow {
                     Button(action: {screenText = calc.sendNumber("4")}) {
                         Text("4").font(.system(size: 36, weight: .bold))
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    }.frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color(red: 70/255, green: 130/255, blue: 180/255)).foregroundColor(.white)
                     Button(action: {screenText = calc.sendNumber("5")}) {
                         Text("5").font(.system(size: 36, weight: .bold))
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    }.frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color(red: 70/255, green: 130/255, blue: 180/255)).foregroundColor(.white)
                     Button(action: {screenText = calc.sendNumber("6")}) {
                         Text("6").font(.system(size: 36, weight: .bold))
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    }.frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color(red: 70/255, green: 130/255, blue: 180/255)).foregroundColor(.white)
                     Button(action: {screenText = calc.sendOperator(3)}) {
                         Text("*").font(.system(size: 36, weight: .bold))
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    }.frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color(red: 70/255, green: 130/255, blue: 180/255)).foregroundColor(.white)
                 }
                 GridRow {
                     Button(action: {screenText = calc.sendNumber("1")}) {
                         Text("1").font(.system(size: 36, weight: .bold))
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    }.frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color(red: 70/255, green: 130/255, blue: 180/255)).foregroundColor(.white)
                     Button(action: {screenText = calc.sendNumber("2")}) {
                         Text("2").font(.system(size: 36, weight: .bold))
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    }.frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color(red: 70/255, green: 130/255, blue: 180/255)).foregroundColor(.white)
                     Button(action: {screenText = calc.sendNumber("3")}) {
                         Text("3").font(.system(size: 36, weight: .bold))
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    }.frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color(red: 70/255, green: 130/255, blue: 180/255)).foregroundColor(.white)
                     Button(action: {screenText = calc.sendOperator(2)}) {
                         Text("-").font(.system(size: 36, weight: .bold))
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    }.frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color(red: 70/255, green: 130/255, blue: 180/255)).foregroundColor(.white)
                 }
                 GridRow {
                     Button(action: {screenText = calc.sendNumber("0")}) {
                         Text("0").font(.system(size: 36, weight: .bold))
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    }.frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color(red: 70/255, green: 130/255, blue: 180/255)).foregroundColor(.white)
                     Button(action: {screenText = calc.sendDot()}) {
                         Text(".").font(.system(size: 36, weight: .bold))
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    }.frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color(red: 70/255, green: 130/255, blue: 180/255)).foregroundColor(.white)
                     Button(action: {screenText = calc.getResult()}) {
                         Text("=").font(.system(size: 36, weight: .bold))
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    }.frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color(red: 70/255, green: 130/255, blue: 180/255)).foregroundColor(.white)
                     Button(action: {screenText = calc.sendOperator(1)}) {
                         Text("+").font(.system(size: 36, weight: .bold))
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    }.frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color(red: 70/255, green: 130/255, blue: 180/255)).foregroundColor(.white)
                 }
             }.padding(6)
