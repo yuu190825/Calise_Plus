@@ -1,3 +1,3 @@
 # Calise_Plus (Calise++)
 
-The new Calise with C++ class (Class_Calc)
+The new Calise with C++ library (Library_Calc)
